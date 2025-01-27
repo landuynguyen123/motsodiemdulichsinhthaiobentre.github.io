@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nông trại Hải Vân - Sân Chim Vàm Hồ</title>
+    <style>
+        /* Thiết lập lại một số thuộc tính cơ bản cho toàn bộ trang */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Định dạng cho toàn bộ trang */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f1; /* Màu hồng nhạt cho nền */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #f28d8d; /* Màu hồng cho header */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: sticky;
+            top: 0; /* Giữ header ở trên cùng của trang */
+            z-index: 1000; /* Đảm bảo thanh điều hướng nằm trên các phần tử khác */
+            width: 100%; /* Đảm bảo header chiếm toàn bộ chiều rộng */
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Điều hướng menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            background-color: #e64a8d; /* Màu hồng đậm cho menu */
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff6f91; /* Màu hồng sáng khi hover */
+            border-radius: 5px;
+        }
+
+        /* Phần nội dung chính */
+        section#activities {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        section#activities h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #f28d8d; /* Màu hồng cho tiêu đề */
+        }
+
+        section#activities ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        section#activities ul li {
+            background-color: #f9c7d7; /* Màu hồng nhạt cho các mục */
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            line-height: 1.8;
+        }
+
+        section#activities ul li:hover {
+            background-color: #f1a9c0; /* Màu hồng đậm khi hover */
+        }
+
+        /* Định dạng hình ảnh trong hoạt động */
+        section#activities img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #e64a8d; /* Màu hồng đậm cho footer */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.chat-container {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: none; /* Ẩn phần bình luận ban đầu */
+}
+
+.chat-bubble {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #d0f0c0;
+    border-radius: 20px;
+    max-width: 80%;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.chat-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #d0f0c0 transparent transparent transparent;
+}
+
+.comment-info {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+    text-align: right;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Logo hình tròn ở góc trái */
+        header img {
+            width: 80px; /* Kích thước logo nhỏ */
+            height: 80px; /* Chiều cao logo bằng với chiều rộng để tạo hình tròn */
+            border-radius: 50%; /* Hình tròn */
+            position: absolute;
+            top: 20px; /* Cách từ trên cùng một chút */
+            left: 20px; /* Cách từ bên trái một chút */
+            object-fit: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #e64a8d;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd1e0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+         <img src="images/logo.jpg" alt="Logo Nhóm" class="logo">
+        <h1>Nông trại Hải Vân - Sân Chim Vàm Hồ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="tourist-spots.html">Điểm Du Lịch</a></li>
+                <li><a href="activities.html">Hoạt Động</a></li>
+                <li><a href="amthuc.html">Ẩm thực</a></li>
+                <li><a href="map.html">Bản Đồ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="activities">
+        <h2>🌾 Hoạt động nổi bật:</h2>
+        <ul>
+            <li>• Bắt cá dưới ao: Cảm giác tự tay bắt được chú cá lóc mập mạp thật thú vị phải không nào? Đây không chỉ là trò chơi mà còn là dịp để kết nối, làm việc nhóm và khám phá đời sống miền quê.</li>
+            <img src="images/a1.jpg" alt="ảnh bắt cá">
+            <img src="images/a2.jpg" alt="ảnh bắt cá">
+
+            <li>• Tắm mương và chèo xuồng: Với áo phao an toàn, mọi người cùng thỏa sức bơi lội, ngắm nhìn khung cảnh thiên nhiên xanh mát.</li>
+            <img src="images/a3.jpg" alt="Tắm mương và chèo xuồng">
+
+            <li>• Tham gia team building: Tiếng cười giòn giã, những pha “té nước” hài hước tạo nên không khí đầy hứng khởi.</li>
+            <img src="images/a4.jpg" alt="hoạt động">
+            <img src="images/a5.jpg" alt="hoạt động">
+        </ul>
+    </section>
+        <div class="chat-container">
+        <div class="chat-bubble" onclick="toggleChatBox()">Xem thêm</div>
+        <div class="chat-box" id="chat-box">
+            <!-- Các bình luận sẽ được hiển thị ở đây -->
+        </div>
+        <textarea id="comment-input" placeholder="Viết bình luận..."></textarea>
+        <button onclick="addComment()">Bình luận</button>
+    </div>
+
+    <footer>
+        <p>❤️Được thực hiện bởi:Lân,Hiển,Nhung,Mai.❤️</p>
+    </footer>
+        <script>
+        function toggleChatBox() {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.style.display = (chatBox.style.display === 'none' || chatBox.style.display === '') ? 'block' : 'none';
+        }
+
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentText = commentInput.value.trim();
+            
+            if (commentText) {
+                const chatBox = document.getElementById('chat-box');
+                
+                // Lấy tên người gửi và thời gian hiện tại
+                const username = "Người dùng"; // Bạn có thể thay đổi tên này theo yêu cầu
+                const time = new Date().toLocaleString(); // Lấy thời gian hiện tại dưới dạng chuỗi
+                
+                // Tạo một phần tử bình luận dưới dạng bong bóng
+                const commentBubble = document.createElement('div');
+                commentBubble.classList.add('chat-bubble');
+                
+                // Thêm nội dung bình luận vào bong bóng
+                const commentContent = document.createElement('div');
+                commentContent.textContent = commentText;
+                
+                // Thêm tên người gửi và thời gian
+                const commentInfo = document.createElement('div');
+                commentInfo.classList.add('comment-info');
+                commentInfo.textContent = `${username} - ${time}`;
+                
+                // Thêm vào phần tử bình luận
+                commentBubble.appendChild(commentContent);
+                commentBubble.appendChild(commentInfo);
+                
+                // Thêm bình luận vào hộp chat
+                chatBox.appendChild(commentBubble);
+                
+                // Cuộn xuống dưới cùng của hộp chat
+                chatBox.scrollTop = chatBox.scrollHeight;
+                
+                // Xóa nội dung nhập
+                commentInput.value = '';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* cyrillic-ext */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCFPrEHJA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCMPrEHJA.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCHPrEHJA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCGPrEHJA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCIPrE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6K6MmTpA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6D6MmTpA.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6I6MmTpA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6J6MmTpA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6H6Mk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 500px;
+    color: #F90;
+    text-align: center;
+
+}
+
+/* Animation webkit */
+@-webkit-keyframes myfirst {
+    0% {
+        margin-left: -235px
+    }
+
+    90% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+/* Animation */
+@keyframes myfirst {
+    0% {
+        margin-left: -235px
+    }
+
+    70% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+.fish {
+    background-image: url('./../imgs/fish.png');
+    width: 235px;
+    height: 104px;
+    margin-left: -235px;
+    position: absolute;
+    animation: myfirst 24s;
+    -webkit-animation: myfirst 24s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+#fish {
+    top: 120px;
+}
+
+#fish2 {
+    top: 260px;
+    animation-delay: 12s;
+    -webkit-animation-delay: 12s;
+}
+
+
+header {
+    height: 160px;
+    background: url('../imgs/golf.png') repeat-x bottom;
+}
+
+#form {
+    height: 100%;
+    background-color: #98d4f3;
+    overflow: hidden;
+    position: relative;
+    letter-spacing: 5px;
+
+}
+
+form {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 40px;
+    color: white;
+    position: relative;
+
+
+}
+
+label,
+input,
+textarea {
+    display: block;
+}
+
+input,
+textarea {
+    width: 500px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.25em;
+    color: #676767;
+    transition: border 0.5s;
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    border: solid 3px #98d4f3;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+}
+
+input:focus,
+textarea:focus {
+    border: solid 3px #77bde0;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+    overflow: auto;
+}
+
+input[type="submit"] {
+    background-color: #F90;
+    color: white;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 1.29em;
+    line-height: 5px;
+    font-family: 'Pacifico', cursive;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    background-color: #F90;
+    color: white;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 1.29em;
+    line-height: 5px;
+    font-family: 'Pacifico', cursive;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #e58f0e;
+}
+
+input[type="submit"]:hover {
+    background-color: #e58f0e;
+
+}
+
+label {
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.formgroup,
+.formgroup-active,
+.formgroup-error {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 10.5%;
+    transition: background-image 0.7s;
+    -webkit-transition: background-image 0.7s;
+    -moz-transition: background-image 0.7s;
+    -o-transition: background-image 0.7s;
+    width: 566px;
+    padding-top: 2px;
+}
+
+.formgroup {
+    background-image: url('../imgs/pixel.gif');
+}
+
+.formgroup-active {
+    background-image: url('../imgs/octo.png');
+}
+
+.formgroup-error {
+    background-image: url('../../imgs/octo-error.png');
+    color: red;
+}
+
+.message {
+    text-align: center;
+    margin-top: 75px;
+}
+    </style>
+    <title>Liên Hệ</title>
+</head>
+
+<body>
+    <header>
+        <h1>Liên Hệ</h1>
+    </header>
+
+   <div class="container">
+  <h1>liên hệ với chúng tôi</h1>
+  <form target="_blank" action="https://formsubmit.co/3693f828ff7b800197bea88b93e1702f" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" name="name" class="form-control" placeholder="Tên của bạn" required>
+        </div>
+        <div class="col">
+          <input type="email" name="email" class="form-control" placeholder="e-mail" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Lời nhắn" class="form-control" name="Lời nhắn" rows="10" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">gửi</button>
+  </form>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

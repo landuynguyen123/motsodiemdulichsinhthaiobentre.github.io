@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản Đồ Du Lịch Sinh Thái Bến Tre</title>
+    <style>
+     /* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Phong cách chung */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    font-size: 0.9rem; /* Giảm kích thước chữ toàn bộ */
+}
+
+/* Header */
+header {
+    background-color: #e91e63;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.8rem; /* Giảm kích thước chữ tiêu đề */
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 1rem; /* Giảm kích thước chữ menu */
+}
+
+nav a:hover {
+    background-color: #ad1457;
+}
+
+/* Bản đồ */
+#map {
+    background-color: #ffffff;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#map h2 {
+    font-size: 1.6rem; /* Giảm kích thước chữ tiêu đề bản đồ */
+    color: #e91e63;
+    margin-bottom: 1rem;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem; /* Giảm kích thước chữ footer */
+}
+
+footer a {
+    color: #f06292;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f48fb1;
+}
+
+/* Logo hình tròn ở góc trái */
+header img {
+    width: 80px; /* Kích thước logo nhỏ */
+    height: 80px; /* Chiều cao logo bằng với chiều rộng để tạo hình tròn */
+    border-radius: 50%; /* Hình tròn */
+    position: absolute;
+    top: 20px; /* Cách từ trên cùng một chút */
+    left: 20px; /* Cách từ bên trái một chút */
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #e64a8d;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em; /* Giảm kích thước chữ menu */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd1e0;
+}
+
+/* Giảm kích thước chữ trong phần <p> */
+p {
+    font-size: 0.9rem; /* Kích thước chữ nhỏ hơn một chút */
+    line-height: 1.5; /* Đảm bảo khoảng cách giữa các dòng dễ đọc */
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+         <img src="images/logo.jpg" alt="Logo Nhóm" class="logo">
+        <h1>Cồn Nhàn - Du Lịch Sinh Thái</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                 <li><a href="connhan.html">Cồn Nhàn</a></li>
+                <li><a href="diahinh.html">Địa lý</a></li>
+                <li><a href="dulich.html">Du lịch</a></li>
+                                <li><a href="map1.html">Map</a></li>
+            </ul>
+        </nav>
+       
+        
+    </header>
+    <p>Cồn Nhàn thuộc xã Bảo Thuận, huyện Ba Tri, tỉnh Bến Tre. Khu vực này nằm gần cửa Ba Lai, nơi các dòng sông đổ ra biển Đông. Phía đông giáp biển Đông. Phía tây và nam giáp các khu vực ven sông của huyện Ba Tri. Phía bắc gần các cồn khác thuộc hệ thống sông Cửu Long.</p>
+
+    <section id="map">
+        <h2>Bản Đồ Du Lịch</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15716.008853529676!2d106.68839773038862!3d10.016674992078475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x319ffa9b2c3b71db%3A0x3fa11cf297365fec!2zS2h1IER1IEzhu4tjaCBU4bqvbSBCaeG7g24gQ-G7k24gTmjDoG4!5e0!3m2!1sfr!2s!4v1737865997910!5m2!1sfr!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <footer>
+       <p>❤️Được thực hiện bởi:Lân,Hiển,Nhung,Mai.❤️</p>
+    </footer>
+
+</body>
+</html>

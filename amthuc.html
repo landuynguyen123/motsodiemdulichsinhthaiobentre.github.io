@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nông trại Hải Vân - Sân Chim Vàm Hồ</title>
+    <style>
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fdf2f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+
+header {
+    background: #e91e63;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #c2185b;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background: #c2185b;
+    padding: 10px;
+    list-style: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff4081;
+}
+
+section#activities {
+    background: #fff;
+    padding: 50px 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    text-align: center;
+}
+
+section#activities h2 {
+    font-size: 2.2em;
+    color: #e91e63;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+section#activities ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+section#activities ul li {
+    background: #fce4ec;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section#activities ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.food-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.food-item {
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.food-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.food-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(90%);
+}
+
+.food-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(233, 30, 99, 0.8);
+    color: white;
+    padding: 10px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.food-item:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.food-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.food-item p {
+    padding: 15px;
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+}
+
+footer {
+    background: #c2185b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 3px solid #e91e63;
+    font-size: 1em;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #ffccbc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    section#activities {
+        padding: 30px 15px;
+    }
+
+    .food-gallery {
+        gap: 15px;
+    }
+}
+footer {
+    background: #c2185b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 3px solid #e91e63;
+    font-size: 1em;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #ffccbc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    section#activities {
+        padding: 30px 15px;
+    }
+
+    .food-gallery {
+        gap: 15px;
+    }
+}
+/* Chat Container */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-container .chat-bubble {
+    padding: 10px;
+    background: #e91e63;
+    color: #fff;
+    border-radius: 15px;
+    margin: 5px;
+    max-width: 80%;
+    align-self: flex-end;
+    position: relative;
+}
+
+.chat-container .chat-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #e91e63 transparent transparent transparent;
+}
+
+#chat-box {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    display: none;
+    flex-grow: 1;
+}
+
+#comment-input {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0;
+    outline: none;
+    font-size: 1em;
+}
+
+button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c2185b;
+}
+
+.comment-info {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+/* Logo hình tròn ở góc trái */
+        header img {
+            width: 80px; /* Kích thước logo nhỏ */
+            height: 80px; /* Chiều cao logo bằng với chiều rộng để tạo hình tròn */
+            border-radius: 50%; /* Hình tròn */
+            position: absolute;
+            top: 20px; /* Cách từ trên cùng một chút */
+            left: 20px; /* Cách từ bên trái một chút */
+            object-fit: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #e64a8d;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd1e0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.jpg" alt="Logo Nhóm" class="logo">
+        <h1>Nông trại Hải Vân - Sân Chim Vàm Hồ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="tourist-spots.html">Điểm Du Lịch</a></li>
+                <li><a href="activities.html">Hoạt Động</a></li>
+                <li><a href="amthuc.html">Ẩm thực</a></li>
+                <li><a href="map.html">Bản Đồ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="activities">
+        <h2>Ẩm thực</h2>
+        <ul>
+            <li>Du khách khi đến đây sẽ trải nghiệm đa dạng ẩm thực vô cùng độc đáo và khác nhau , mang tính đặc  sản đậm bản sắc dân tộc và truyền thống văn hoá lâu đời tại tỉnh Bến Tre
+Ví dụ như : bánh xèo , bánh cá lòng tong dừa sợi , mắm tép đu đủ thịt luộc , ăn kèm bún , tép rang với dừa ... Nhiều món đặc sản như trái cây và nước uống khác</li>
+          <div class="food-gallery">
+    <div class="food-item">
+        <img src="images/ba.jpg" alt="Bánh Xèo">
+        <p>Bánh xèo</p>
+    </div>
+    <div class="food-item">
+        <img src="images/bu.jpg" alt="Bánh cá lòng tong dừa sợi">
+        <p>Bánh cá lòng tong dừa sợi</p>
+    </div>
+    <div class="food-item">
+        <img src="images/dd.jpg" alt="Mắm tép đu đủ thịt luộc ăn kèm bún">
+        <p>Mắm tép đu đủ thịt luộc ăn kèm bún</p>
+    </div>
+    <div class="food-item">
+        <img src="images/nc.jpg" alt="Nước dừa">
+        <p>Nước dừa</p>
+    </div>
+    <div class="food-item">
+        <img src="images/lc.jpg" alt="Râu câu dừa">
+        <p>Râu câu dừa</p>
+    </div>
+    <div class="food-item">
+        <img src="images/d.jpg" alt="Đuông dừa">
+        <p>Đuông dừa</p>
+    </div>
+    <div class="food-item">
+        <img src="images/g.jpg" alt="Gỏi củ hủ dừa">
+        <p>Gỏi củ hủ dừa</p>
+    </div>
+</div>
+        </ul>
+    </section>
+     <div class="chat-container">
+        <div class="chat-bubble" onclick="toggleChatBox()">Xem thêm</div>
+        <div class="chat-box" id="chat-box">
+            <!-- Các bình luận sẽ được hiển thị ở đây -->
+        </div>
+        <textarea id="comment-input" placeholder="Viết bình luận..."></textarea>
+        <button onclick="addComment()">Bình luận</button>
+    </div>
+
+    <footer>
+        <p>❤️Được thực hiện bởi:Lân,Hiển,Nhung,Mai.❤️</p>
+    </footer>
+     <script>
+        function toggleChatBox() {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.style.display = (chatBox.style.display === 'none' || chatBox.style.display === '') ? 'block' : 'none';
+        }
+
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentText = commentInput.value.trim();
+            
+            if (commentText) {
+                const chatBox = document.getElementById('chat-box');
+                
+                // Lấy tên người gửi và thời gian hiện tại
+                const username = "Người dùng"; // Bạn có thể thay đổi tên này theo yêu cầu
+                const time = new Date().toLocaleString(); // Lấy thời gian hiện tại dưới dạng chuỗi
+                
+                // Tạo một phần tử bình luận dưới dạng bong bóng
+                const commentBubble = document.createElement('div');
+                commentBubble.classList.add('chat-bubble');
+                
+                // Thêm nội dung bình luận vào bong bóng
+                const commentContent = document.createElement('div');
+                commentContent.textContent = commentText;
+                
+                // Thêm tên người gửi và thời gian
+                const commentInfo = document.createElement('div');
+                commentInfo.classList.add('comment-info');
+                commentInfo.textContent = `${username} - ${time}`;
+                
+                // Thêm vào phần tử bình luận
+                commentBubble.appendChild(commentContent);
+                commentBubble.appendChild(commentInfo);
+                
+                // Thêm bình luận vào hộp chat
+                chatBox.appendChild(commentBubble);
+                
+                // Cuộn xuống dưới cùng của hộp chat
+                chatBox.scrollTop = chatBox.scrollHeight;
+                
+                // Xóa nội dung nhập
+                commentInput.value = '';
+            }
+        }
+    </script>
+
+</body>
+</html>

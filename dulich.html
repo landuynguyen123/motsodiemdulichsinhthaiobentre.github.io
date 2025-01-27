@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cồn Nhàn - Du Lịch Sinh Thái</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #e64a8d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+/* Logo hình tròn ở góc trái */
+        header img {
+            width: 80px; /* Kích thước logo nhỏ */
+            height: 80px; /* Chiều cao logo bằng với chiều rộng để tạo hình tròn */
+            border-radius: 50%; /* Hình tròn */
+            position: absolute;
+            top: 20px; /* Cách từ trên cùng một chút */
+            left: 20px; /* Cách từ bên trái một chút */
+            object-fit: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #e64a8d;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd1e0;
+        }
+
+        section#activities {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        section#activities h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #e64a8d;
+        }
+
+        section#activities ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        section#activities ul li {
+            background-color: #f9c7d7;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        section#activities ul li:hover {
+            background-color: #f1a9c0;
+        }
+
+        section#activities img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 45%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #e64a8d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .chat-container {
+            width: 450px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .chat-box {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+
+        .chat-bubble {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #d0f0c0;
+            border-radius: 20px;
+            max-width: 80%;
+            position: relative;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .chat-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: #d0f0c0 transparent transparent transparent;
+        }
+
+        .comment-info {
+            font-size: 12px;
+            color: #555;
+            margin-top: 5px;
+            text-align: right;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.jpg" alt="Logo Nhóm" class="logo">
+        <h1>Cồn Nhàn - Du Lịch Sinh Thái</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                 <li><a href="connhan.html">Cồn Nhàn</a></li>
+                <li><a href="diahinh.html">Địa Lí</a></li>
+                <li><a href="dulich.html">Du Lịch</a></li>
+                <li><a href="map1.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="activities">
+        <h2>Trải Nghiệm Du Lịch Cồn Nhàn</h2>
+        <ul>
+            <li>Cồn Nhàn thu hút du khách bởi cảnh đẹp thiên nhiên hoang sơ, hệ sinh thái rừng ngập mặn và những hoạt động thú vị như thả lưới, câu cá, hoặc tham gia vào đời sống người dân địa phương.</li>
+        </ul>
+
+        <div class="image-gallery">
+            <img src="images/ca.jpg" alt="Cồn Nhàn">
+            <img src="images/chai.jpg" alt="Điểm Nổi Bật">
+            <img src="images/rung.jpg" alt="Rừng Ngập Mặn">
+            <img src="images/tam.jpg" alt="Biển">
+        </div>
+
+        <ul>
+            <li>Khám phá những món ẩm thực đặc sắc như nghêu, sò, ốc và nhiều món ngon khác từ biển.</li>
+        </ul>
+
+        <div class="image-gallery">
+            <img src="images/b1.jpg" alt="Món Ăn">
+            <img src="images/b2.jpg" alt="Món Ăn">
+            <img src="images/b3.jpg" alt="Món Ăn">
+                <img src="images/cua.jpg" alt="Món Ăn">
+                    <img src="images/nghieu.jpg" alt="Món Ăn">
+        </div>
+
+        <ul>
+            <li><strong>Hoạt động thú vị:</strong> Thả lưới, câu cá, hoặc khám phá cuộc sống người dân địa phương.</li>
+        </ul>
+    </section>
+
+    <footer>
+       <p>❤️Được thực hiện bởi:Lân,Hiển,Nhung,Mai.❤️</p>
+    </footer>
+
+    <script>
+        function toggleChatBox() {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.style.display = (chatBox.style.display === 'none' || chatBox.style.display === '') ? 'block' : 'none';
+        }
+
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentText = commentInput.value.trim();
+            
+            if (commentText) {
+                const chatBox = document.getElementById('chat-box');
+                const username = "Người dùng";
+                const time = new Date().toLocaleString();
+
+                const commentBubble = document.createElement('div');
+                commentBubble.classList.add('chat-bubble');
+                
+                const commentContent = document.createElement('div');
+                commentContent.textContent = commentText;
+
+                const commentInfo = document.createElement('div');
+                commentInfo.classList.add('comment-info');
+                commentInfo.textContent = `${username} - ${time}`;
+                
+                commentBubble.appendChild(commentContent);
+                commentBubble.appendChild(commentInfo);
+                
+                chatBox.appendChild(commentBubble);
+                chatBox.scrollTop = chatBox.scrollHeight;
+                
+                commentInput.value = '';
+            }
+        }
+    </script>
+
+</body>
+</html>

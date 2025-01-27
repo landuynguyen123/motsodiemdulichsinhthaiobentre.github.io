@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Cồn Nhàn</title>
+    <style>
+        /* Cấu hình cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f1; /* Nền hồng nhạt */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #f28d8d; /* Hồng đậm */
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            position: relative; /* Để logo có thể định vị chính xác */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+
+        /* Logo hình tròn ở góc trái */
+        header img {
+            width: 80px; /* Kích thước logo nhỏ */
+            height: 80px; /* Chiều cao logo bằng với chiều rộng để tạo hình tròn */
+            border-radius: 50%; /* Hình tròn */
+            position: absolute;
+            top: 20px; /* Cách từ trên cùng một chút */
+            left: 20px; /* Cách từ bên trái một chút */
+            object-fit: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #e64a8d;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd1e0;
+        }
+
+        /* Bố cục hình ảnh */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Nội dung từng phần */
+        section {
+            padding: 40px;
+            background-color: white;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section h2 {
+            color: #f28d8d;
+            font-size: 2.3em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e64a8d;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Logo Cồn Nhàn"> <!-- Logo hình tròn ở góc trái -->
+        <h1>Cồn Nhàn - Du Lịch Sinh Thái</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="connhan.html">Cồn Nhàn</a></li>
+                <li><a href="diahinh.html">Địa lý</a></li>
+                <li><a href="dulich.html">Du lịch</a></li>
+                <li><a href="map1.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="image-gallery">
+        <img src="images/conc.jpg" alt="cồn">
+        <img src="images/con1.jpg" alt="cồn">
+        <img src="images/con2.jpg" alt="cồn">
+        <img src="images/con3.jpg" alt="cồn">
+    </div>
+
+    <!-- Phần giới thiệu -->
+    <section id="intro">
+        <h2>Giới Thiệu Sơ Nét</h2>
+        <p>
+            🌊 Cồn Nhàn là một trong những khu du lịch nổi tiếng nhất ở huyện Ba Tri. 
+            Nơi đây thu hút du khách trong và ngoài tỉnh nhờ những món ăn hải sản thơm ngon, 
+            khung cảnh bình minh đầy sức sống, và những buổi hoàng hôn ấm áp bên gia đình.
+        </p>
+    </section>
+
+    <footer>
+        <p>❤️Được thực hiện bởi:Lân,Hiển,Nhung,Mai.❤️</p>
+    </footer>
+</body>
+</html>
