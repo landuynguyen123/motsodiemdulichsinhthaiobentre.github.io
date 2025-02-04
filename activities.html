@@ -102,7 +102,7 @@
 
         /* Định dạng hình ảnh trong hoạt động */
         section#activities img {
-            max-width: 100%;
+            max-width: 50%; /* Kích thước ảnh nhỏ lại còn 50% */
             height: auto;
             border-radius: 8px;
             margin-top: 15px;
@@ -131,89 +131,8 @@
         footer a:hover {
             text-decoration: underline;
         }
-    {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
 
-/* Chat Container */
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-container .chat-bubble {
-    padding: 10px;
-    background: #e91e63;
-    color: #fff;
-    border-radius: 15px;
-    margin: 5px;
-    max-width: 80%;
-    align-self: flex-end;
-    position: relative;
-}
-
-.chat-container .chat-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: -10px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #e91e63 transparent transparent transparent;
-}
-
-#chat-box {
-    height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    display: none;
-    flex-grow: 1;
-}
-
-#comment-input {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 100%;
-    border-radius: 0;
-    outline: none;
-    font-size: 1em;
-}
-
-button {
-    background: #e91e63;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #c2185b;
-}
-
-.comment-info {
-    font-size: 0.8em;
-    color: #666;
-    margin-top: 5px;
-}
-/* Logo hình tròn ở góc trái */
+        /* Logo hình tròn ở góc trái */
         header img {
             width: 80px; /* Kích thước logo nhỏ */
             height: 80px; /* Chiều cao logo bằng với chiều rộng để tạo hình tròn */
@@ -280,7 +199,8 @@ button:hover {
             <img src="images/a5.jpg" alt="hoạt động">
         </ul>
     </section>
-        <div class="chat-container">
+
+    <div class="chat-container">
         <div class="chat-bubble" onclick="toggleChatBox()">Xem thêm</div>
         <div class="chat-box" id="chat-box">
             <!-- Các bình luận sẽ được hiển thị ở đây -->
@@ -292,7 +212,8 @@ button:hover {
     <footer>
         <p>❤️Được thực hiện bởi:Lân,Hiển,Nhung,Mai.❤️</p>
     </footer>
-        <script>
+
+    <script>
         function toggleChatBox() {
             const chatBox = document.getElementById('chat-box');
             chatBox.style.display = (chatBox.style.display === 'none' || chatBox.style.display === '') ? 'block' : 'none';
