@@ -93,9 +93,10 @@
         }
 
         form label {
-            font-size: 18px;
+            font-size: 20px;
             color: white;
             font-weight: bold;
+            font-family: 'Trebuchet MS', sans-serif;
         }
 
         form input, form select, form button {
@@ -104,10 +105,11 @@
             border: 1px solid #ccc;
             font-size: 18px;
             width: 100%;
+            font-family: 'Trebuchet MS', sans-serif;
         }
 
         form select, form input[type="date"] {
-            background-color: #f7f7f7;
+            background-color: #f9f9f9;
         }
 
         form button {
@@ -116,18 +118,25 @@
             border: none;
             cursor: pointer;
             font-size: 18px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
         }
 
         form button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        form button:focus {
+            outline: none;
+            box-shadow: 0 0 5px #007bff;
         }
 
         /* Contact Section */
         .contact-section {
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(135deg, #007bff, #00aaff); /* Gradient Background */
+            background: linear-gradient(135deg, #007bff, #00aaff);
             margin-top: 50px;
             border-radius: 8px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -217,7 +226,7 @@
 
         <div class="content">
             <h1>Khám phá</h1>
-            <p>Bạn có thể tìm hiểu thêm vài địa điểm ở đây</p>
+            <p>Hãy chọn địa điểm bạn cần tiền hiểu:</p>
 
             <div class="form-container">
                 <form onsubmit="return redirectToPlace();">
@@ -225,7 +234,7 @@
                     <select id="destination" name="destination">
                         <option value="">--Chọn địa điểm--</option>
                         <option value="connhan.html">Cồn Nhàn</option>
-                        <option value="activities.html">Nông trại Hải Vân - Sân Chim Vàm Hồ </option>
+                        <option value="activities.html">Nông trại Hải Vân - Sân Chim Vàm Hồ</option>
                     </select>
 
                     <button type="submit">Tìm Kiếm</button>
@@ -235,73 +244,17 @@
     </div>
 
    <!-- Contact Section -->
-<div class="contact-section">
-    <h2>Liên hệ với chúng tôi</h2>
-    <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nhấp vào liên kết dưới đây để liên hệ với chúng tôi.</p>
-    <a href="https://landuynguyen123.github.io/php-email-form/" class="contact-link" target="_blank">Gửi Email cho chúng tôi</a>
-</div>
-
-<style>
-    /* Contact Section */
-    .contact-section {
-        text-align: center;
-        padding: 60px 20px;
-        background: linear-gradient(135deg, #ff66b2, #ff3399); /* Gradient background với sắc hồng */
-        margin-top: 50px;
-        border-radius: 8px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        color: white;
-        font-family: 'Arial', sans-serif;
-    }
-
-    .contact-section h2 {
-        font-size: 36px;
-        color: white;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: bold;
-    }
-
-    .contact-section p {
-        font-size: 18px;
-        color: rgba(255, 255, 255, 0.8); /* Màu trắng nhẹ */
-        margin-bottom: 30px;
-        line-height: 1.6;
-    }
-
-    .contact-link {
-        display: inline-block;
-        padding: 15px 30px;
-        background-color: #fff; /* Nền trắng cho liên kết */
-        color: #ff66b2; /* Màu chữ hồng */
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Hover Effect */
-    .contact-link:hover {
-        background-color: #ff66b2; /* Nền hồng khi hover */
-        color: white; /* Chữ trắng khi hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        transform: translateY(-3px); /* Dịch chuyển nhẹ lên khi hover */
-    }
-
-    .contact-link:focus {
-        outline: none;
-    }
-</style>
-
+   <div class="contact-section">
+       <h2>Liên hệ với chúng tôi</h2>
+       <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nhấp vào liên kết dưới đây để liên hệ với chúng tôi.</p>
+       <a href="https://landuynguyen123.github.io/php-email-form/" class="contact-link" target="_blank">Gửi Email cho chúng tôi</a>
+   </div>
 
     <script>
         function redirectToPlace() {
             const place = document.getElementById("destination").value;
             if (place) {
-                window.open(place, "_blank");
+                window.location.href = place;
             } else {
                 alert("Vui lòng chọn một địa điểm!");
             }
