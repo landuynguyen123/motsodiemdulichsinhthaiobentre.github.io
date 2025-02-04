@@ -5,280 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Du lịch sinh thái ở Bến Tre</title>
     <style>
-       * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body, html {
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
 
-.logo {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-    z-index: 9999;
-    transition: transform 0.3s ease;
-}
+        /* Logo */
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
 
-.logo:hover {
-    transform: scale(1.1);
-}
+        .logo:hover {
+            transform: scale(1.1);
+        }
 
-/* Video Background */
-.video-background {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
+        /* Video Background */
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* Content Section */
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 1;
-}
+        /* Content Section */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
 
-.content h1 {
-    font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-}
+        .content h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
 
-.content p {
-    font-size: 22px;
-    margin-bottom: 40px;
-    color: rgba(255, 255, 255, 0.8);
-}
+        .content p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.8);
+        }
 
-.form-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 550px;
-    margin: 0 auto;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-form label {
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-}
+        form label {
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+        }
 
-form input, form select, form button {
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 18px;
-    width: 100%;
-}
+        form input, form select, form button {
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+            width: 100%;
+        }
 
-form select, form input[type="date"] {
-    background-color: #f7f7f7;
-}
+        form select, form input[type="date"] {
+            background-color: #f7f7f7;
+        }
 
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
+        form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
 
-form button:hover {
-    background-color: #0056b3;
-}
+        form button:hover {
+            background-color: #0056b3;
+        }
 
-/* Highlights Section */
-.highlights {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #f7f7f7;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #007bff, #00aaff); /* Gradient Background */
+            margin-top: 50px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
 
-.highlights h2 {
-    font-size: 45px;
-    margin-bottom: 40px;
-    color: #333;
-    text-transform: uppercase;
-}
+        .contact-section h2 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
+        .contact-section p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+        }
 
-.card {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .contact-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #007bff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
+        .contact-link:hover {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
 
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+        .contact-link:focus {
+            outline: none;
+        }
 
-.card:hover img {
-    transform: scale(1.1);
-}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 45px;
+            }
 
-.card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+            .content p {
+                font-size: 18px;
+            }
 
-.card:hover .card-content {
-    opacity: 1;
-}
+            .form-container {
+                padding: 30px;
+                max-width: 450px;
+            }
 
-.card h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    color: #FF5733;
-}
+            .contact-section h2 {
+                font-size: 30px;
+            }
 
-.card p {
-    font-size: 16px;
-    line-height: 1.6;
-}
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-/* Links Styling */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content h1 {
-        font-size: 45px;
-    }
-
-    .content p {
-        font-size: 18px;
-    }
-
-    .form-container {
-        padding: 30px;
-        max-width: 450px;
-    }
-
-    .highlights h2 {
-        font-size: 35px;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-        height: 350px;
-    }
-}
-/* Contact Section */
-.contact-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f2f2f2;
-    margin-top: 50px;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-section h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.contact-section p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.contact-link {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.contact-link:hover {
-    background-color: #0056b3;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.contact-link:focus {
-    outline: none;
-}
-
+            .card {
+                width: 90%;
+                height: 350px;
+            }
+        }
 
     </style>
 </head>
@@ -304,7 +226,6 @@ a {
                         <option value="">--Chọn địa điểm--</option>
                         <option value="connhan.html">Cồn Nhàn</option>
                         <option value="activities.html">Nông trại Hải Vân - Sân Chim Vàm Hồ </option>
-                      
                     </select>
 
                     <button type="submit">Tìm Kiếm</button>
@@ -313,14 +234,67 @@ a {
         </div>
     </div>
 
-  
-  <!-- Liên hệ với chúng tôi -->
+   <!-- Contact Section -->
 <div class="contact-section">
     <h2>Liên hệ với chúng tôi</h2>
-    <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nhấp vào liên kết dưới đây để liên hệ.</p>
+    <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nhấp vào liên kết dưới đây để liên hệ với chúng tôi.</p>
     <a href="https://landuynguyen123.github.io/php-email-form/" class="contact-link" target="_blank">Gửi Email cho chúng tôi</a>
 </div>
 
+<style>
+    /* Contact Section */
+    .contact-section {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #ff66b2, #ff3399); /* Gradient background với sắc hồng */
+        margin-top: 50px;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        color: white;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .contact-section h2 {
+        font-size: 36px;
+        color: white;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .contact-section p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.8); /* Màu trắng nhẹ */
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .contact-link {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #fff; /* Nền trắng cho liên kết */
+        color: #ff66b2; /* Màu chữ hồng */
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hover Effect */
+    .contact-link:hover {
+        background-color: #ff66b2; /* Nền hồng khi hover */
+        color: white; /* Chữ trắng khi hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-3px); /* Dịch chuyển nhẹ lên khi hover */
+    }
+
+    .contact-link:focus {
+        outline: none;
+    }
+</style>
 
 
     <script>
