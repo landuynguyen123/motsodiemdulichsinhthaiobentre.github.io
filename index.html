@@ -1,265 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Du lịch sinh thái ở Bến Tre</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        body, html {
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-        }
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-        /* Logo */
-        .logo {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            z-index: 9999;
-            transition: transform 0.3s ease;
-        }
+    h1 {
+      color: #333;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
 
-        .logo:hover {
-            transform: scale(1.1);
-        }
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-        /* Video Background */
-        .video-background {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s;
+    }
 
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+      border-color: #007BFF;
+      background-color: #fff;
+      outline: none;
+    }
 
-        /* Content Section */
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            z-index: 1;
-        }
+    textarea {
+      resize: vertical;
+      height: 150px;
+    }
 
-        .content h1 {
-            font-size: 60px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-        }
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-        .content p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            color: rgba(255, 255, 255, 0.8);
-        }
+    button:hover {
+      background-color: #0056b3;
+    }
 
-        .form-container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 550px;
-            margin: 0 auto;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        form label {
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-            font-family: 'Trebuchet MS', sans-serif;
-        }
-
-        form input, form select, form button {
-            padding: 14px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 18px;
-            width: 100%;
-            font-family: 'Trebuchet MS', sans-serif;
-        }
-
-        form select, form input[type="date"] {
-            background-color: #f9f9f9;
-        }
-
-        form button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-
-        form button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        form button:focus {
-            outline: none;
-            box-shadow: 0 0 5px #007bff;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #007bff, #00aaff);
-            margin-top: 50px;
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            color: white;
-        }
-
-        .contact-section h2 {
-            font-size: 36px;
-            color: white;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-
-        .contact-section p {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 30px;
-        }
-
-        .contact-link {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #fff;
-            color: #007bff;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-link:hover {
-            background-color: #007bff;
-            color: white;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-link:focus {
-            outline: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .content h1 {
-                font-size: 45px;
-            }
-
-            .content p {
-                font-size: 18px;
-            }
-
-            .form-container {
-                padding: 30px;
-                max-width: 450px;
-            }
-
-            .contact-section h2 {
-                font-size: 30px;
-            }
-
-            .card-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card {
-                width: 90%;
-                height: 350px;
-            }
-        }
-
-    </style>
+  </style>
 </head>
 <body>
 
-    <!-- Logo -->
-    <img src="images/logo.jpg" alt="Logo" class="logo">
+  <div class="container">
+    <h1>Liên Hệ Với Chúng Tôi</h1>
+    <form target="_blank" action="https://formsubmit.co/mytambt2007@gmail.com" method="POST">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Tên của bạn" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Lời nhắn" name="message" required></textarea>
+      </div>
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
 
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="video/m.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <div class="content">
-            <h1>Khám phá</h1>
-            <p>Hãy chọn địa điểm bạn cần tiền hiểu:</p>
-
-            <div class="form-container">
-                <form onsubmit="return redirectToPlace();">
-                    <label for="destination">Địa điểm</label>
-                    <select id="destination" name="destination">
-                        <option value="">--Chọn địa điểm--</option>
-                        <option value="connhan.html">Cồn Nhàn</option>
-                        <option value="activities.html">Nông trại Hải Vân - Sân Chim Vàm Hồ</option>
-                    </select>
-
-                    <button type="submit">Tìm Kiếm</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-   <!-- Contact Section -->
-   <div class="contact-section">
-       <h2>Liên hệ với chúng tôi</h2>
-       <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nhấp vào liên kết dưới đây để liên hệ với chúng tôi.</p>
-       <a href="https://landuynguyen123.github.io/php-email-form/" class="contact-link" target="_blank">Gửi Email cho chúng tôi</a>
-   </div>
-
-    <script>
-        function redirectToPlace() {
-            const place = document.getElementById("destination").value;
-            if (place) {
-                window.location.href = place;
-            } else {
-                alert("Vui lòng chọn một địa điểm!");
-            }
-            return false;
-        }
-    </script>
 </body>
 </html>
